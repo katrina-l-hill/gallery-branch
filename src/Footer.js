@@ -5,13 +5,11 @@ import React from 'react';
 import Header from './Header.js';
 // need to import the Main from the Main.js file.
 import Main from './Main.js';
-// / need to import the Footer from the Footer.js file.
-import Footer from './Footer.js';
 // need to add back css file that was deleted when initially deleted everything in this file.
 import './App.css';
 
 // 2. Name/Declare the class component.
-class App extends React.Component {
+class Footer extends React.Component {
   // Define the class with a render method. The render method should return something.
   render() {
     return (
@@ -27,5 +25,5 @@ class App extends React.Component {
 }
 
 // 3. Export the class.
-export default App;
+export default Footer;
 
