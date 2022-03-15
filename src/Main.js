@@ -12,15 +12,16 @@ class Main extends React.Component {
     render() {
         return (
             <main>
+                <title>Gallery of Horns</title>
                 <HornedBeast 
-                name="Sparky" 
-                species="Bearded Dragon" 
-                fleshColor="Green"
+                title="Sparky" 
+                imageUrl="./beardedDragon.jpeg" 
+                description="Sparky is small and ferocious."
                 />
                 <HornedBeast 
-                name="Buffy"
-                species="Rhino"
-                fleshColor="Black"
+                title="Buffy"
+                imageUrl="./blackRhino.jpeg"
+                description="Buffy is big and majestic."
                 />
             </main>
         );

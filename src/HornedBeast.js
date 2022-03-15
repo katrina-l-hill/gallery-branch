@@ -10,12 +10,9 @@ class HornedBeast extends React.Component {
       return (
         <article>
         <title>Gallery of Horns</title>
-          <h2>{this.props.Sparky}</h2>
-          <p>Sparky is small and ferocious.</p>
-          <img src='./beardedDragon.jpeg' alt='image of bearded dragon'></img>
-          <h2>{this.props.Buffy}</h2>
-          <p>Buffy is big and majestic.</p>
-          <img src='./blackRhino.jpeg' alt='image of black rhino'></img>
+          <h2>{this.props.title}</h2>
+          <p>{this.props.description}</p>
+          <img src={this.props.imageUrl} alt={this.props.title} title={this.props.description}></img>
         </article>
       )
     }
