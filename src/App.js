@@ -18,9 +18,7 @@ class App extends React.Component {
       <>
       <Header/>
       <Main/>  
-        <footer>
-          &copy; Code Fellows, 2022. Katrina Hill (Author).
-        </footer>
+      <Footer/>
       </>
     );
   }
