@@ -13,10 +13,10 @@ class Main extends React.Component {
     // Define the class with a render method. The render method should return something.
     render() {
         // console.log(this.props.data);
-        let animal = [];
+        let animals = [];
         this.props.data.forEach(beast => {
             console.log(beast);
-          animal.push(
+          animals.push(
             <HornedBeast
                 title={beast.title}
                 imageUrl={beast.image_url}
@@ -39,7 +39,7 @@ class Main extends React.Component {
                 imageUrl="./blackRhino.jpeg"
                 description="Buffy is big and majestic."
                 /> */}
-                {animal}
+                {animals}
             </main>
         );
     }
