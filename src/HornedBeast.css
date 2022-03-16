@@ -20,3 +20,6 @@ article p:last-of-type {
 article p:last-of-type:hover {
     color:blue;
 }
+.article-button {
+    margin: .1rem .1vw;
+}
