@@ -9,6 +9,7 @@ import Main from './Main.js';
 import Footer from './Footer.js';
 // need to add back css file that was deleted when initially deleted everything in this file.
 import './App.css';
+import data from './data.json';
 
 // 2. Name/Declare the class component.
 class App extends React.Component {
@@ -16,11 +17,11 @@ class App extends React.Component {
   render() {
     return (
       <>
-      <Header/>
-      <Main/>  
-        <footer>
-          &copy; Code Fellows, 2022. Katrina Hill (Author).
-        </footer>
+        <Header />
+        <Main 
+          data={data}
+        />
+        <Footer />
       </>
     );
   }
@@ -28,4 +29,3 @@ class App extends React.Component {
 
 // 3. Export the class.
 export default App;
-
