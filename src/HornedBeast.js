@@ -2,6 +2,8 @@
 // 1. Start by creating a class component. Always start by importing React.
 import React from 'react';
 
+import Button from 'react-bootstrap/Button';
+
 import './HornedBeast.css';
 
 // 2. Name/Declare the class component.
@@ -35,6 +37,8 @@ class HornedBeast extends React.Component {
                     alt={this.props.title}
                     title={this.props.description}
                 />
+                <Button className="article-button">Button 1</Button>
+                <Button className="article-button">Button 2</Button>
             </article>
         )
     }
