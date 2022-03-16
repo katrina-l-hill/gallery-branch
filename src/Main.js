@@ -4,6 +4,8 @@ import React from 'react';
 
 import HornedBeast from './HornedBeast.js';
 
+import './Main.css';
+
 // import data from './data.json';
 // console.log(data);
 // 2. Name/Declare the class component.
