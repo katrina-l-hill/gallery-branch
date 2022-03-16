@@ -14,11 +14,26 @@ import data from './data.json';
 // 2. Name/Declare the class component.
 class App extends React.Component {
   // Define the class with a render method. The render method should return something.
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedBeast: ''
+    };
+  }
+  selectBeast = (evt) => {
+    console.log(evt.target.src);
+    this.setState({
+      selectedBeast: evt.target.src
+    }, 
+    // callback for after setState finishes executing
+    () => {console.log(this.state)}); 
+  }
   render() {
     return (
       <>
         <Header />
         <Main 
+          selectBeast={this.selectBeast}
           data={data}
         />
         <Footer />
