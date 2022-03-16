@@ -3,7 +3,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
 import './HornedBeast.css';
 
