@@ -5,20 +5,36 @@ import React from 'react';
 // 2. Name/Declare the class component.
 class HornedBeast extends React.Component {
     // Define the class with a render method. The render method should return something.
+    // add a state to be able to change a component
+    constructor(props) {
+        super(props);
+        this.state = {
+            favorited: 0
+        }
+    }
+    handleImageClick = () => {
+        console.log("clicked");
+        this.setState({
+            favorited: this.state.favorited + 1
+        });
+    }
+
     render() {
         // console.log(this.props.name);
-      return (
-        <article>
-        <title>Gallery of Horns</title>
-          <h2>{this.props.title}</h2>
-          <p>{this.props.description}</p>
-          <img 
-            src={this.props.imageUrl} 
-            alt={this.props.title} 
-            title={this.props.description}
-            />
-        </article>
-      )
+        return (
+            <article>
+                {/* <title>Gallery of Horns</title> */}
+                <h2>{this.props.title}</h2>
+                {/* <p>{this.props.description}</p> */}
+                <p>{this.state.favorited} favorite</p>
+                <p>number of clicks</p>
+                <img onClick={this.handleImageClick}
+                    src={this.props.imageUrl}
+                    alt={this.props.title}
+                    title={this.props.description}
+                />
+            </article>
+        )
     }
 }
 
