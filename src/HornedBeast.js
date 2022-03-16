@@ -2,6 +2,8 @@
 // 1. Start by creating a class component. Always start by importing React.
 import React from 'react';
 
+import './HornedBeast.css';
+
 // 2. Name/Declare the class component.
 class HornedBeast extends React.Component {
     // Define the class with a render method. The render method should return something.
@@ -26,8 +28,8 @@ class HornedBeast extends React.Component {
                 {/* <title>Gallery of Horns</title> */}
                 <h2>{this.props.title}</h2>
                 {/* <p>{this.props.description}</p> */}
-                <p>{this.state.favorited} favorite</p>
-                <p>number of clicks</p>
+                <p>{} favorite</p>
+                <p>number of clicks: {this.state.favorited}</p>
                 <img onClick={this.handleImageClick}
                     src={this.props.imageUrl}
                     alt={this.props.title}
