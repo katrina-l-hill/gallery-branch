@@ -6,6 +6,8 @@ article {
 }
 article img {
     width: 100%;
+    margin-top: .5em;
+    margin-bottom: .5em;
 }
 article p {
     font-size: 11px;
@@ -23,3 +25,7 @@ article p:last-of-type:hover {
 .article-button {
     margin: .1rem .1vw;
 }
+/* article Card {
+    width: fit-content;
+    block-size: fit-content;
+} */
