@@ -18,10 +18,13 @@ class HornedBeast extends React.Component {
         }
     }
     handleImageClick = () => {
-        console.log("clicked");
         this.setState({
             favorited: this.state.favorited + 1
         });
+    }
+    handleCardClick = (evt) => {
+        //console.log(evt);
+        this.props.selectBeast(evt);
     }
 
     render() {
@@ -34,7 +37,7 @@ class HornedBeast extends React.Component {
 
 
 
-                <img onClick={this.handleImageClick}
+                <img onClick={this.handleCardClick}
                     src={this.props.imageUrl}
                     alt={this.props.title}
                     title={this.props.description}
