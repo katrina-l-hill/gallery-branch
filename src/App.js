@@ -7,6 +7,8 @@ import Header from './Header.js';
 import Main from './Main.js';
 // / need to import the Footer from the Footer.js file.
 import Footer from './Footer.js';
+import SelectedBeast from './SelectedBeast.js';
+
 // need to add back css file that was deleted when initially deleted everything in this file.
 import './App.css';
 import data from './data.json';
@@ -17,26 +19,50 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedBeast: ''
+      selectedBeast: { 
+        title: '',
+        imageUrl: '',
+        description: ''
+      },
+      showModal: false
     };
   }
-  selectBeast = (evt) => {
-    console.log(evt.target.src);
+  hideModal = () => {
     this.setState({
-      selectedBeast: evt.target.src
-    }, 
-    // callback for after setState finishes executing
-    () => {console.log(this.state)}); 
+      showModal: false
+    });
+  }
+  openModal = () => {
+    this.setState({
+      showModal: true
+    });
+  }
+  selectBeast = (beastInfo) => {
+    this.setState({
+      selectedBeast: beastInfo
+    },
+      // callback for after setState finishes executing
+      () => {
+        //show modal
+        this.openModal();
+      });
   }
   render() {
     return (
       <>
         <Header />
-        <Main 
+        <Main
           selectBeast={this.selectBeast}
           data={data}
+          openModal={this.openModal}
         />
         <Footer />
+        <SelectedBeast 
+        showModal={this.state.showModal}
+        onHideClick={this.hideModal}
+        title={this.state.selectedBeast.title}
+        imageUrl={this.state.selectedBeast.imageUrl}
+        description={this.state.selectedBeast.description}/>
       </>
     );
   }
