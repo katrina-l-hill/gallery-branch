@@ -12,19 +12,19 @@ import './Main.css';
 class Main extends React.Component {
     // Define the class with a render method. The render method should return something.
     render() {
-        // console.log(this.props.data);
         let animals = [];
         this.props.data.forEach(beast => {
-            console.log(beast);
-          animals.push(
-            <HornedBeast
-                title={beast.title}
-                imageUrl={beast.image_url}
-                description={beast.description}
-                horns={beast.horns}
-                keyword={beast.keyword}
-            />
-          )  
+            animals.push(
+                <HornedBeast
+                    selectBeast={this.props.selectBeast}
+                    title={beast.title}
+                    imageUrl={beast.image_url}
+                    description={beast.description}
+                    horns={beast.horns}
+                    keyword={beast.keyword}
+                    openModal={this.props.openModal}
+                />
+            )
         });
         return (
             <main>
