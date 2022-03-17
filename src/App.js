@@ -58,6 +58,7 @@ class App extends React.Component {
         />
         <Footer />
         <SelectedBeast 
+        test={() => {}}
         showModal={this.state.showModal}
         onHideClick={this.hideModal}
         title={this.state.selectedBeast.title}
