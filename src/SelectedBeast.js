@@ -8,10 +8,7 @@ import Modal from 'react-bootstrap/Modal';
 // 2. Name/Declare the class component.
 class SelectedBeast extends React.Component {
     // Define the class with a render method. The render method should return something.
-    constructor(props) {
-        super(props);  
-      }
-
+    
       hideModalTest = () =>{
         console.log("hiding");
       }
@@ -25,7 +22,7 @@ class SelectedBeast extends React.Component {
             <Modal.Title>{this.props.title}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img src={this.props.imageUrl} />
+                <img src={this.props.imageUrl} alt={this.props.title} />
                 <p>{this.props.description}</p>
             </Modal.Body>
           </Modal>
