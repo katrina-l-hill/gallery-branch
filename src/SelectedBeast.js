@@ -1,7 +1,7 @@
 // There are 3 basic parts to a React component.
 // 1. Start by creating a class component. Always start by importing React.
 import React from 'react';
-import App from './App.js';
+// import App from './App.js';
 import './Main.css';
 
 import Modal from 'react-bootstrap/Modal';
