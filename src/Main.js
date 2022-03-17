@@ -13,7 +13,7 @@ class Main extends React.Component {
     // Define the class with a render method. The render method should return something.
     render() {
         let animals = [];
-        this.props.data.map(beast => {
+        this.props.data.forEach(beast => {
             animals.push(
                 <HornedBeast
                     selectBeast={this.props.selectBeast}
