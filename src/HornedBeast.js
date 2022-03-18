@@ -39,11 +39,16 @@ class HornedBeast extends React.Component {
                     show={this.state.showModal}
                 />
                 <p>Click on {this.props.title} if it's your favorite</p>
-                <Card border="primary" style={{ width: '5rem' }}>
+                <Card>
                     <Card.Body>
                         <p>{ }💚{this.state.favorited}</p>
                     </Card.Body>
                 </Card>
+                {/* <Card border="primary" style={{ width: '5rem' }}>
+                    <Card.Body>
+                        <p>{ }💚{this.state.favorited}</p>
+                    </Card.Body>
+                </Card> */}
             </article>
         )
     }
