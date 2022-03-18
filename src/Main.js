@@ -1,44 +1,50 @@
 // There are 3 basic parts to a React component.
 // 1. Start by creating a class component. Always start by importing React.
 import React from 'react';
-
 import HornedBeast from './HornedBeast.js';
-
 import './Main.css';
 
-// import data from './data.json';
-// console.log(data);
 // 2. Name/Declare the class component.
 class Main extends React.Component {
     // Define the class with a render method. The render method should return something.
     render() {
         let animals = [];
-        this.props.data.forEach(beast => {
-            animals.push(
-                <HornedBeast
-                    selectBeast={this.props.selectBeast}
-                    title={beast.title}
-                    imageUrl={beast.image_url}
-                    description={beast.description}
-                    horns={beast.horns}
-                    keyword={beast.keyword}
-                    openModal={this.props.openModal}
-                />
-            )
-        });
+        if (this.props.filterHorns) {
+            //filtering is required
+            let numVal = parseInt(this.props.hornFilter);
+            let filteredAnimals = this.props.data.filter(item => item.horns === numVal)
+            filteredAnimals.forEach(beast => {
+                animals.push(
+                    <HornedBeast
+                        selectBeast={this.props.selectBeast}
+                        title={beast.title}
+                        imageUrl={beast.image_url}
+                        description={beast.description}
+                        horns={beast.horns}
+                        keyword={beast.keyword}
+                        openModal={this.props.openModal}
+                    />
+                )
+            });
+        }
+        else {
+            //no filtering required
+            this.props.data.forEach(beast => {
+                animals.push(
+                    <HornedBeast
+                        selectBeast={this.props.selectBeast}
+                        title={beast.title}
+                        imageUrl={beast.image_url}
+                        description={beast.description}
+                        horns={beast.horns}
+                        keyword={beast.keyword}
+                        openModal={this.props.openModal}
+                    />
+                )
+            });
+        }
         return (
             <main>
-                {/* <title>Gallery of Horns</title>
-                <HornedBeast 
-                title="Sparky" 
-                imageUrl="./beardedDragon.jpeg" 
-                description="Sparky is small and ferocious."
-                />
-                <HornedBeast 
-                title="Buffy"
-                imageUrl="./blackRhino.jpeg"
-                description="Buffy is big and majestic."
-                /> */}
                 {animals}
             </main>
         );

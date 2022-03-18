@@ -4,11 +4,17 @@ article {
     padding: 1vw;
     margin-bottom: 1vw;
     width: 10%;
+    background-color: honeydew;
 }
 article img {
     width: 100%;
     margin-top: .5em;
     margin-bottom: .5em;
+    /* image sizing code heigh and object-fit influenced from: https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width */
+    height: 5vw;            
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
 }
 article p {
     font-size: .6em;
@@ -30,6 +36,13 @@ article p:last-of-type:hover {
 article h2{
     font-size: .7em;
 }
+
+.card {
+    background-color:lightgoldenrodyellow;
+    width: fit fit-content;
+    align-items:center;
+}
+
 /* article Card {
     width: fit-content;
     block-size: fit-content;

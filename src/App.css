@@ -1,8 +1,36 @@
 body {
-  background-color:darkgrey;
+  background-color:linen;
 }
 
 img {
   max-width: 200px;
   max-height: 200px;
+}
+
+form {
+  margin: 0.3em 0.3em;
+}
+
+form > div > label{
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0.3em 0.3em;
+}
+
+form > div > select{
+  font-size: 0.7em !important;
+  margin: 0.3em 0.3em;
+  max-width: 127px;
+}
+form > div > select > option{
+  font-size: 0.7em;
+}
+
+form > div > button{
+  margin: 0.5em 0.5em;
+  font-size: 0.7em !important;
+}
+
+footer {
+  margin-top: 1em;
 }

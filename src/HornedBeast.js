@@ -31,24 +31,24 @@ class HornedBeast extends React.Component {
     render() {
         return (
             <article>
-                {/* <title>Gallery of Horns</title> */}
                 <h2 onClick={this.props.openModal}>{this.props.title}</h2>
-                {/* <p>{this.props.description}</p> */}
                 <img onClick={this.handleImageClick}
                     src={this.props.imageUrl}
                     alt={this.props.title}
                     title={this.props.description}
                     show={this.state.showModal}
                 />
-                {/* <Button className="article-button">Button 1</Button>
-                <Button className="article-button">Button 2</Button> */}
                 <p>Click on {this.props.title} if it's your favorite</p>
-                <Card border="primary" style={{ width: '5rem' }}>
+                <Card>
                     <Card.Body>
                         <p>{ }💚{this.state.favorited}</p>
-                        {/* <p>number of clicks: {this.state.favorited}</p> */}
                     </Card.Body>
                 </Card>
+                {/* <Card border="primary" style={{ width: '5rem' }}>
+                    <Card.Body>
+                        <p>{ }💚{this.state.favorited}</p>
+                    </Card.Body>
+                </Card> */}
             </article>
         )
     }
